@@ -6,6 +6,7 @@ for (let index = 0; index < names.length; index++) {
 }
 
 console.warn("-------------");
+
 // 2. Dodajte svoje ime na kraj niza.
 names[names.length]="Gita";
 
@@ -16,4 +17,15 @@ for (let index = 0; index < names.length; index++) {
     if(names[index].trim()==="Jane"){
         break;
     }
+}
+
+console.error("-------------");
+
+// 4. Napišite naredbu za uklanjanje undefined vrijednosti iz niza.
+names = names.filter(function( element ) {
+   return element !== undefined;
+});
+
+for (let index = 0; index < names.length; index++) {
+    console.log(names[index]);  
 }
